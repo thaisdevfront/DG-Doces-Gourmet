@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DG Doces Gourmet - Sabores que Encantam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #FFF0F5 0%, #FFF9F9 100%);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #FF85A2 0%, #FF4785 100%);
+            box-shadow: 0 4px 15px rgba(255, 71, 133, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 71, 133, 0.4);
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #FFF9FB 100%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i data-feather="heart" class="text-pink-500 mr-2"></i>
+                <span class="text-2xl font-bold font-['Playfair+Display'] text-pink-600">DG Doces Gourmet</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="font-semibold hover:text-pink-500">Início</a>
+                <a href="#produtos" class="font-semibold hover:text-pink-500">Nossos Produtos</a>
+                <a href="#sobre" class="font-semibold hover:text-pink-500">Sobre Nós</a>
+                <a href="#depoimentos" class="font-semibold hover:text-pink-500">Depoimentos</a>
+                <a href="#contato" class="font-semibold hover:text-pink-500">Encomendar</a>
+            </nav>
+            <button class="md:hidden focus:outline-none">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient pt-32 pb-20 md:pt-40 md:pb-28">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-['Playfair+Display'] mb-6 leading-tight">
+                    <span class="text-pink-600">Doces Gourmet</span> que transformam momentos em <span class="text-pink-600">memórias</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8">
+                    Ingredientes selecionados, preparo artesanal e muito amor em cada doce. Experimente a diferença de um verdadeiro doce gourmet.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contato" class="btn-primary text-white font-bold py-4 px-8 rounded-full text-lg">
+                        Faça sua encomenda
+                    </a>
+                    <a href="#produtos" class="bg-white text-pink-600 font-bold py-4 px-8 rounded-full text-lg border-2 border-pink-200 hover:bg-pink-50 transition">
+                        Conheça nossos produtos
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="http://static.photos/food/640x360/1" alt="Bolo no pote DG Doces Gourmet" class="rounded-lg shadow-xl w-full max-w-md transform rotate-2">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+                        <div class="flex items-center">
+                            <div class="bg-pink-100 p-3 rounded-full mr-3">
+                                <i data-feather="star" class="text-pink-500"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold">+5.000</p>
+                                <p class="text-sm text-gray-500">Doces vendidos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center px-4">
+                    <div class="bg-pink-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="award" class="text-pink-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Qualidade Premium</h3>
+                    <p class="text-gray-600">Ingredientes selecionados e receitas exclusivas para uma experiência única de sabor.</p>
+                </div>
+                <div class="text-center px-4">
+                    <div class="bg-pink-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="truck" class="text-pink-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Entrega Rápida</h3>
+                    <p class="text-gray-600">Entregamos em toda a cidade com qualidade e cuidado em cada detalhe.</p>
+                </div>
+                <div class="text-center px-4">
+                    <div class="bg-pink-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="gift" class="text-pink-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Presente Perfeito</h3>
+                    <p class="text-gray-600">Embalagens especiais para presentear com estilo e sofisticação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="produtos" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-['Playfair+Display'] mb-4">Nossas <span class="text-pink-600">Delícias</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Conheça nossos produtos mais amados e escolha seu favorito</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/2" alt="Bolo no pote" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            Mais pedido
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Bolo no Pote</h3>
+                        <p class="text-gray-600 mb-4">Camadas perfeitas de bolo e recheio em uma apresentação prática e deliciosa.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-pink-600">A partir de R$12</span>
+                            <a href="#contato" class="bg-pink-100 text-pink-600 font-semibold py-2 px-4 rounded-full hover:bg-pink-200 transition">
+                                Encomendar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/3" alt="Cone recheado" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Cone Recheado</h3>
+                        <p class="text-gray-600 mb-4">Crocância do cone combinada com recheios cremosos e surpreendentes.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-pink-600">A partir de R$10</span>
+                            <a href="#contato" class="bg-pink-100 text-pink-600 font-semibold py-2 px-4 rounded-full hover:bg-pink-200 transition">
+                                Encomendar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/4" alt="Doces especiais" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            Novidade
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Doces Especiais</h3>
+                        <p class="text-gray-600 mb-4">Seleção de doces finos para eventos especiais e momentos gourmet.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-pink-600">Sob consulta</span>
+                            <a href="#contato" class="bg-pink-100 text-pink-600 font-semibold py-2 px-4 rounded-full hover:bg-pink-200 transition">
+                                Encomendar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contato" class="inline-block btn-primary text-white font-bold py-4 px-8 rounded-full text-lg">
+                    Ver todos os sabores e opções
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold font-['Playfair+Display'] mb-6">Sobre a <span class="text-pink-600">DG Doces Gourmet</span></h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Nossa jornada começou com uma paixão por criar doces que fossem além do comum. Cada receita é desenvolvida com cuidado artesanal, usando apenas os melhores ingredientes.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        O que nos diferencia é a atenção aos detalhes e o amor que colocamos em cada produção. Não fazemos apenas doces, criamos experiências memoráveis.
+                    </p>
+                    <div class="flex items-center">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="check" class="text-pink-600"></i>
+                        </div>
+                        <p class="font-semibold">100% artesanal</p>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="check" class="text-pink-600"></i>
+                        </div>
+                        <p class="font-semibold">Ingredientes selecionados</p>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <div class="bg-pink-100 p-3 rounded-full mr-4">
+                            <i data-feather="check" class="text-pink-600"></i>
+                        </div>
+                        <p class="font-semibold">Higiene e qualidade garantidas</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-lg overflow-hidden shadow-lg">
+                            <img src="http://static.photos/food/640x360/5" alt="Processo de produção" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-lg transform translate-y-8">
+                            <img src="http://static.photos/food/640x360/6" alt="Ingredientes frescos" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-lg transform -translate-y-8">
+                            <img src="http://static.photos/food/640x360/7" alt="Embalagens especiais" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-lg">
+                            <img src="http://static.photos/food/640x360/8" alt="Equipe DG Doces" class="w-full h-64 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="depoimentos" class="py-20 bg-pink-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-['Playfair+Display'] mb-4">O que dizem nossos <span class="text-pink-600">clientes</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">A satisfação dos nossos clientes é nossa maior recompensa</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Os bolos no pote da DG são incríveis! Já encomendei várias vezes para eventos e sempre recebo elogios. O sabor é único e a apresentação impecável."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/200x200/1" alt="Ana Silva" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-bold">Ana Silva</p>
+                            <p class="text-sm text-gray-500">Cliente há 2 anos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Comprei os cones recheados para presentear minha equipe e foi um sucesso! Todos amaram e já pediram o contato. A entrega foi super rápida e os doces estavam perfeitos."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/200x200/2" alt="Carlos Mendes" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-bold">Carlos Mendes</p>
+                            <p class="text-sm text-gray-500">Primeira compra</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Contratei a DG para fornecer doces para meu casamento e foi a melhor decisão! Os doces eram lindos e deliciosos, superaram todas as expectativas. Recomendo muito!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="http://static.photos/people/200x200/3" alt="Juliana Rocha" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-bold">Juliana Rocha</p>
+                            <p class="text-sm text-gray-500">Evento especial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-pink-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold font-['Playfair+Display'] mb-6">Pronto para experimentar nossos <span class="text-yellow-300">doces irresistíveis</span>?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Faça sua encomenda agora e receba em casa toda a qualidade e sabor DG Doces Gourmet
+            </p>
+            <a href="#contato" class="inline-block bg-white text-pink-600 font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:bg-gray-100 transition">
+                Quero encomendar agora
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contato" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-pink-500 text-white p-12">
+                        <h2 class="text-3xl font-bold font-['Playfair+Display'] mb-6">Faça sua encomenda</h2>
+                        <p class="mb-8">
+                            Preencha o formulário ao lado e entraremos em contato para confirmar todos os detalhes da sua encomenda.
+                        </p>
+                        <div class="mb-6 flex items-center">
+                            <div class="bg-pink-400 p-3 rounded-full mr-4">
+                                <i data-feather="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold">Telefone</p>
+                                <p>(XX) XXXX-XXXX</p>
+                            </div>
+                        </div>
+                        <div class="mb-6 flex items-center">
+                            <div class="bg-pink-400 p-3 rounded-full mr-4">
+                                <i data-feather="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold">Email</p>
+                                <p>contato@dgdocesgourmet.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-pink-400 p-3 rounded-full mr-4">
+                                <i data-feather="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold">Horário de atendimento</p>
+                                <p>Seg-Sex: 9h às 18h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-12">
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-semibold mb-2">Nome completo</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-semibold mb-2">Telefone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            <div>
+                                <label for="product" class="block text-gray-700 font-semibold mb-2">Produto de interesse</label>
+                                <select id="product" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                                    <option value="">Selecione um produto</option>
+                                    <option value="bolo-pote">Bolo no Pote</option>
+                                    <option value="cone-recheado">Cone Recheado</option>
+                                    <option value="doces-especiais">Doces Especiais</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 font-semibold mb-2">Mensagem</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-primary text-white font-bold py-4 px-6 rounded-lg text-lg">
+                                Enviar encomenda
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold font-['Playfair+Display'] mb-4">Perguntas <span class="text-pink-600">Frequentes</span></h2>
+                    <p class="text-lg text-gray-600">Tire suas dúvidas sobre nossos produtos e serviços</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-6 focus:outline-none">
+                            <span class="text-lg font-semibold">Qual o prazo mínimo para encomenda?</span>
+                            <i data-feather="chevron-down" class="w-6 h-6 text-pink-500"></i>
+                        </button>
+                        <div class="px-6 pb-6">
+                            <p class="text-gray-600">
+                                O prazo mínimo para encomenda é de 48 horas. Para eventos e grandes quantidades, recomendamos encomendar com pelo menos 5 dias de antecedência.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-6 focus:outline-none">
+                            <span class="text-lg font-semibold">Vocês entregam em outras cidades?</span>
+                            <i data-feather="chevron-down" class="w-6 h-6 text-pink-500"></i>
+                        </button>
+                        <div class="px-6 pb-6">
+                            <p class="text-gray-600">
+                                Atualmente realizamos entregas apenas na nossa cidade e região metropolitana. Para outras localidades, entre em contato para verificar possibilidades.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-6 focus:outline-none">
+                            <span class="text-lg font-semibold">Os doces contêm conservantes?</span>
+                            <i data-feather="chevron-down" class="w-6 h-6 text-pink-500"></i>
+                        </button>
+                        <div class="px-6 pb-6">
+                            <p class="text-gray-600">
+                                Não utilizamos conservantes artificiais em nossos produtos. Todos são feitos com ingredientes frescos e naturais, por isso recomendamos consumo dentro do prazo indicado.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-6 focus:outline-none">
+                            <span class="text-lg font-semibold">É possível personalizar os sabores?</span>
+                            <i data-feather="chevron-down" class="w-6 h-6 text-pink-500"></i>
+                        </button>
+                        <div class="px-6 pb-6">
+                            <p class="text-gray-600">
+                                Sim! Oferecemos opções de personalização de sabores para eventos especiais. Entre em contato para conversarmos sobre suas ideias e possibilidades.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-gray-200 rounded-xl overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-6 focus:outline-none">
+                            <span class="text-lg font-semibold">Qual a validade dos produtos?</span>
+                            <i data-feather="chevron-down" class="w-6 h-6 text-pink-500"></i>
+                        </button>
+                        <div class="px-6 pb-6">
+                            <p class="text-gray-600">
+                                Nossos produtos têm validade média de 3 dias quando conservados em refrigeração. Recomendamos consumo no mesmo dia da entrega para melhor experiência de sabor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <i data-feather="heart" class="text-pink-500 mr-2"></i>
+                        <span class="text-2xl font-bold font-['Playfair+Display']">DG Doces Gourmet</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Doces artesanais feitos com ingredientes selecionados e muito amor.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-pink-500">
+                            <i data-feather="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-500">
+                            <i data-feather="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-500">
+                            <i data-feather="youtube" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Produtos</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500">Bolos no Pote</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500">Cones Recheados</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500">Doces Especiais</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500">Kits Presente</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500">Novidades</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Links Úteis</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500">Sobre Nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500">Depoimentos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500">Termos de Serviço</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contato</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="text-pink-500 mr-3 mt-1"></i>
+                            <span class="text-gray-400">Rua dos Doces, 123 - Centro</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="text-pink-500 mr-3 mt-1"></i>
+                            <span class="text-gray-400">(XX) XXXX-XXXX</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="text-pink-500 mr-3 mt-1"></i>
+                            <span class="text-gray-400">contato@dgdocesgourmet.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="clock" class="text-pink-500 mr-3 mt-1"></i>
+                            <span class="text-gray-400">Seg-Sex: 9h às 18h</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    © 2023 DG Doces Gourmet. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-pink-500">Termos de Serviço</a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // FAQ accordion functionality
+        const faqButtons = document.querySelectorAll('.border button');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.setAttribute('data-feather', 'chevron-down');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.setAttribute('data-feather', 'chevron-up');
+                }
+                
+                feather.replace();
+            });
+        });
+    </script>
+</body>
+</html>
